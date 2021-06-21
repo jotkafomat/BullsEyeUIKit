@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
+    @IBOutlet var targetLabel: UILabel!
+    
     var currentValue: Int = 0
     var targetValue = 0
     
@@ -16,10 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         startNewRound()
     }
-
+    
     @IBAction func showAlert() {
         let message = "The value of the slider is now \(currentValue)" +
-        "\nThe target value is: \(targetValue)"
+            "\nThe target value is: \(targetValue)"
         
         let alert = UIAlertController(
             title: "Hello World",
@@ -38,9 +40,13 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
     }
     func startNewRound() {
-      targetValue = Int.random(in: 1...100)
-      currentValue = 50
-      slider.value = Float(currentValue)
+        targetValue = Int.random(in: 1...100)
+        currentValue = 50
+        slider.value = Float(currentValue)
+        updateLabels()
+    }
+    func updateLabels() {
+        targetLabel.text = String(targetValue)
     }
 }
 
