@@ -20,12 +20,49 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
+        
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+
+        let thumbImageHighlighted = UIImage(
+          named: "SliderThumb-Highlighted")!
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+
+        let insets = UIEdgeInsets(
+          top: 0,
+          left: 14,
+          bottom: 0,
+          right: 14)
+
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(
+          withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(
+          withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+
     }
     
     @IBAction func showAlert() {
+        let title: String
         let difference = abs(currentValue - targetValue)
-        let points = 100 - difference
+        var points = 100 - difference
+        
+        switch difference {
+        case 0:
+            title = "Perfect"
+            points += 100
+        case 1...5:
+            title = "You almost had it"
+        case 6...10:
+            title = "Pretty good"
+        default:
+            title = "Not even close"
+        }
         
         score += points
         
@@ -34,8 +71,9 @@ class ViewController: UIViewController {
         "\nThe difference is: \(difference)" +
         "\nYour score \(points) points"
         
+        
         let alert = UIAlertController(
-            title: "Score for \(round). round",
+            title: title,
             message: message,
             preferredStyle: .alert)
         let action = UIAlertAction(
@@ -49,6 +87,13 @@ class ViewController: UIViewController {
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
     }
+    
+    @IBAction func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
+    }
+    
     func startNewRound() {
         round += 1
         targetValue = Int.random(in: 1...100)
