@@ -20,8 +20,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAlert() {
+        let difference = abs(currentValue - targetValue)
+        let points = 100 - difference
+        
         let message = "The value of the slider is now \(currentValue)" +
-            "\nThe target value is: \(targetValue)"
+            "\nThe target value is: \(targetValue)" +
+        "\nThe difference is: \(difference)" +
+        "\nYour score \(points) points"
         
         let alert = UIAlertController(
             title: "Hello World",
@@ -30,10 +35,9 @@ class ViewController: UIViewController {
         let action = UIAlertAction(
             title: "Awesome",
             style: .default,
-            handler: nil)
+            handler: { _ in self.startNewRound() })
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
