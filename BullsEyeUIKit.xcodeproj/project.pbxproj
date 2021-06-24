@@ -15,6 +15,8 @@
 		E12D46FC2680AB5600D5C4C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12D46FA2680AB5600D5C4C4 /* LaunchScreen.storyboard */; };
 		E12D47072680AB5600D5C4C4 /* BullsEyeUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12D47062680AB5600D5C4C4 /* BullsEyeUIKitTests.swift */; };
 		E12D47122680AB5600D5C4C4 /* BullsEyeUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12D47112680AB5600D5C4C4 /* BullsEyeUIKitUITests.swift */; };
+		E1D3919626839CF400BB4D70 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3919526839CF400BB4D70 /* AboutViewController.swift */; };
+		E1D3919A2683A88700BB4D70 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = E1D391992683A88700BB4D70 /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E12D470D2680AB5600D5C4C4 /* BullsEyeUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12D47112680AB5600D5C4C4 /* BullsEyeUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUIKitUITests.swift; sourceTree = "<group>"; };
 		E12D47132680AB5600D5C4C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D3919526839CF400BB4D70 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E1D391992683A88700BB4D70 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		E12D46EE2680AB5000D5C4C4 /* BullsEyeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E1D391992683A88700BB4D70 /* BullsEye.html */,
 				E12D46EF2680AB5000D5C4C4 /* AppDelegate.swift */,
 				E12D46F12680AB5000D5C4C4 /* SceneDelegate.swift */,
 				E12D46F32680AB5000D5C4C4 /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				E12D46F82680AB5600D5C4C4 /* Assets.xcassets */,
 				E12D46FA2680AB5600D5C4C4 /* LaunchScreen.storyboard */,
 				E12D46FD2680AB5600D5C4C4 /* Info.plist */,
+				E1D3919526839CF400BB4D70 /* AboutViewController.swift */,
 			);
 			path = BullsEyeUIKit;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12D46FC2680AB5600D5C4C4 /* LaunchScreen.storyboard in Resources */,
+				E1D3919A2683A88700BB4D70 /* BullsEye.html in Resources */,
 				E12D46F92680AB5600D5C4C4 /* Assets.xcassets in Resources */,
 				E12D46F72680AB5000D5C4C4 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +267,7 @@
 			files = (
 				E12D46F42680AB5000D5C4C4 /* ViewController.swift in Sources */,
 				E12D46F02680AB5000D5C4C4 /* AppDelegate.swift in Sources */,
+				E1D3919626839CF400BB4D70 /* AboutViewController.swift in Sources */,
 				E12D46F22680AB5000D5C4C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
