@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-QQ-Z4l">
-                                <rect key="frame" x="0.0" y="0.0" width="666" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-QQ-Z4l">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-HZ-rWN">
                                 <rect key="frame" x="293" y="198" width="100" height="37"/>
@@ -131,6 +130,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wCc-QQ-Z4l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Le6-zq-i1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCc-QQ-Z4l" secondAttribute="trailing" id="MZo-oR-3aU"/>
+                            <constraint firstItem="wCc-QQ-Z4l" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ail-Ko-lrl"/>
+                            <constraint firstItem="wCc-QQ-Z4l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="faL-jr-cQi"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="roundLabel" destination="kuQ-MR-bQm" id="AVb-NT-Nvx"/>
@@ -151,9 +156,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-Ps-hRk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tpO-Ps-hRk">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-CH-YKQ">
                                 <rect key="frame" x="285" y="310" width="100" height="37"/>
@@ -177,6 +181,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mXG-Vb-0X3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tpO-Ps-hRk" firstAttribute="leading" secondItem="mXG-Vb-0X3" secondAttribute="leading" id="724-Zb-YgK"/>
+                            <constraint firstItem="tpO-Ps-hRk" firstAttribute="top" secondItem="mXG-Vb-0X3" secondAttribute="top" id="QQW-5V-ZOv"/>
+                            <constraint firstItem="tpO-Ps-hRk" firstAttribute="bottom" secondItem="mXG-Vb-0X3" secondAttribute="bottom" id="hPK-58-jSW"/>
+                            <constraint firstItem="tpO-Ps-hRk" firstAttribute="trailing" secondItem="mXG-Vb-0X3" secondAttribute="trailing" id="oEB-nO-osk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="c6m-kl-OsG" id="iDf-pE-heu"/>
